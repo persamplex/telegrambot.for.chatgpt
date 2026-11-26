@@ -50,7 +50,7 @@ export default {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ chat_id: ADMIN_CHAT_ID, text: body.text }),
-        redirect: "error",
+        redirect: "manual",
       });
       const result = await response.json();
       if (!response.ok || result.ok !== true)
